@@ -1,45 +1,74 @@
 # Как создать проект в Cloud Google Console?
 
 1. Переходим на сайт https://console.cloud.google.com
-   1. При первом запуске будет следующее окно ![Приветствие](./pictures/hello-agree.png)
-   2. Выбираем любую страну (пока Россия не доступна) и соглашаемся с условиями использования
-   3. Нажимаем кнопку "AGREE AND CONTINUE"
-2. Нажимаем кнопку "Select a project" (если уже есть проекты, то надпись будет - название последнего открытого проекта, но при нажатии на кнопку всё равно появится 3-й пункт) ![Где кнопка Select a project первый проект](./pictures/select-a-project.png) ![Где кнопка Select a project не первый проект](./pictures/select-a-project-if-projects-exists.png)
-3. Дальше видим окно с проектами, если в первый раз, то не будет проектов, но нас интересует кнопка "New Project" - нажимаем ![Кнопка NEW PROJECT](./pictures/new-project.png)
-4. Называем проект и при желании можно запарится - создать/выбрать организацию, но это не обязательно ![Выбираем имя и организацию](./pictures/rename-and-choise-organization.png)
-5. Ждём, когда создатся проект ![Ждём создания проекта](./pictures/wait-for-creating.png)
-6. Проект создался, выбираем проект ![Выбираем проект](./pictures/select-project.png)
-7. Нас после выбора перекидывает на страницу Dashboard ![Dashboard](./pictures/dashboard.png)
-8. Нужно навести курсор на "APIs & Services" и нажать на "Library" ![Выбираем Library](./pictures/choise-library.png)
-9. Открывается страница библиотеки API ![Страница Library](./pictures/library.png)
-10. В поиске вбиваем интересующие нас API (дальше будет пример с Sheet): ![Вводит в поиск Sheet](./pictures/search-sheet-api.png)
+	1. При первом запуске будет следующее окно 
+      ![Приветствие](./pictures/hello-agree.png)
+	2. Выбираем любую страну (пока Россия не доступна) и соглашаемся с условиями использования
+	3. Нажимаем кнопку "AGREE AND CONTINUE"
+2. Нажимаем кнопку "Select a project" (если уже есть проекты, то надпись будет - название последнего открытого проекта, но при нажатии на кнопку всё равно появится 3-й пункт) 
+   ![Где кнопка Select a project первый проект](./pictures/select-a-project.png)
+   ![Где кнопка Select a project не первый проект](./pictures/select-a-project-if-projects-exists.png)
+3. Дальше видим окно с проектами, если в первый раз, то не будет проектов, но нас интересует кнопка "New Project" - нажимаем 
+   ![Кнопка NEW PROJECT](./pictures/new-project.png)
+4. Называем проект и при желании можно запарится - создать/выбрать организацию, но это не обязательно 
+   ![Выбираем имя и организацию](./pictures/rename-and-choise-organization.png)
+5. Ждём, когда создатся проект 
+   ![Ждём создания проекта](./pictures/wait-for-creating.png)
+6. Проект создался, выбираем проект 
+   ![Выбираем проект](./pictures/select-project.png)
+7. Нас после выбора перекидывает на страницу Dashboard 
+   ![Dashboard](./pictures/dashboard.png)
+8. Нужно навести курсор на "APIs & Services" и нажать на "Library" 
+   ![Выбираем Library](./pictures/choise-library.png)
+9. Открывается страница библиотеки API 
+   ![Страница Library](./pictures/library.png)
+10. В поиске вбиваем интересующие нас API (дальше будет пример с Sheet): 
+    ![Вводит в поиск Sheet](./pictures/search-sheet-api.png)
     1. Для работы с диском - Drive (создание файлов и папок, получение списка файлов и папок, удаление файлов и папок)
     2. Для работы с таблицами - Sheet (редактирование таблиц)
     3. Для работы с календарём - Calendar
     4. Для работы с почтой - Gmail
     5. Для работы с Youtube - YouTube Data API (если нужна аналитика - YouTube Analytics API)
     6. Есть и другие, но они вряд-ли пригодятся
-11. Получив результат выбираем нужное API (если нашлось несколько выбираем нужный) ![Выбираем нужное API](./pictures/choise-our-api.png)
-12. Активируем API ![Активируем API](./pictures/enable-api.png)
-13. Нас перекидывает на страницу с отчётом по работе API (количество запросов, статус, ошибки) ![Информация о использовании API](./pictures/api-details.png)
-14. Слева в меню выбираем Credentials ![Выбираем Credentials](./pictures/choise-credentials.png)
+11. Получив результат выбираем нужное API (если нашлось несколько выбираем нужный) 
+    ![Выбираем нужное API](./pictures/choise-our-api.png)
+12. Активируем API 
+    ![Активируем API](./pictures/enable-api.png)
+13. Нас перекидывает на страницу с отчётом по работе API (количество запросов, статус, ошибки) 
+    ![Информация о использовании API](./pictures/api-details.png)
+14. Слева в меню выбираем Credentials 
+    ![Выбираем Credentials](./pictures/choise-credentials.png)
 15. Есть 3 способа авторизации приложения:
     1. API Keys - ???
     2. OAuth 2.0 - для использования приложения необходимо авторизоваться
     3. Service Account - для использования приложения необходимо пригласить и дать доступ аккаунту нашего приложения
-16. В основном нам будет хватать Service Account, поэтому кликаем на CREATE CREDENTIALS ![Нажимаем кнопку CREATE CREDENTIALS](./pictures/create-credentials.png)
-17. Выбираем Service account ![Выбираем Service account](./pictures/choise-service-account.png)
-18. Называем как-нибудь наш аккаунт, email генерируется автоматически, если необходимо - пишем описание, и затем нажимаем кнопку CREATE AND CONTINUE ![Заполняем и нажимаем кнопку CREATE AND CONTINUE](./pictures/fill-service-account-info-and-continue.png)
-19. Дальше выбираем роль, зачастую будет хватать базовых (Basic) ролей, а точнее одной роли - Editor (редактор). Роль редактор позволяет читать и изменять документы. ![Выбираем роль](./pictures/service-account-select-a-role.png)
-20. Нажимаем кнопку CONTINUE ![Нажимаем кнопку CONTINUE](./pictures/service-account-select-a-role-continue.png)
-21. Теперь нужно выдать доступы для управления этим аккаунтом, вписываем свою почту в оба поля, и при необходимости какие-нибудь другие ![Выдаём доступы к аккаунту](./pictures/service-account-grant-access.png)
-22. Жмём кнопку DONE ![Нажимаем кнопку DONE](./pictures/service-account-done.png)
+16. В основном нам будет хватать Service Account, поэтому кликаем на CREATE CREDENTIALS 
+    ![Нажимаем кнопку CREATE CREDENTIALS](./pictures/create-credentials.png)
+17. Выбираем Service account
+     ![Выбираем Service account](./pictures/choise-service-account.png)
+18. Называем как-нибудь наш аккаунт, email генерируется автоматически, если необходимо - пишем описание, и затем нажимаем кнопку CREATE AND CONTINUE 
+    ![Заполняем и нажимаем кнопку CREATE AND CONTINUE](./pictures/fill-service-account-info-and-continue.png)
+19. Дальше выбираем роль, зачастую будет хватать базовых (Basic) ролей, а точнее одной роли - Editor (редактор). Роль редактор позволяет читать и изменять документы. 
+    ![Выбираем роль](./pictures/service-account-select-a-role.png)
+20. Нажимаем кнопку CONTINUE 
+    ![Нажимаем кнопку CONTINUE](./pictures/service-account-select-a-role-continue.png)
+21. Теперь нужно выдать доступы для управления этим аккаунтом, вписываем свою почту в оба поля, и при необходимости какие-нибудь другие 
+    ![Выдаём доступы к аккаунту](./pictures/service-account-grant-access.png)
+22. Жмём кнопку DONE 
+    ![Нажимаем кнопку DONE](./pictures/service-account-done.png)
 23. Казалось бы всё, но увы нет :(
-24. Нас перекидывает на страницу Credentials, где мы должны нажать на почту нами созданного аккаунта (именно на почту) или на значок редактирования (ручка) ![Выбираем наш аккаунт для редактирования](./pictures/choise-our-account.png)
-25. Открывается страница описания нашего аккаунта, нам нужно нажать в меню на KEYS ![Выбираем ключи](./pictures/select-keys.png)
-26. Нажимаем на кнопку ADD KEY ![Нажимаем на кнопку ADD KEY](./pictures/click-add-key-button.png)
-27. Открывается выпадающее меню, нам нужно выбрать "Create new key" ![Нажимаем на Create new key](./pictures/choise-create-new-key.png)
-28. По умолчанию в типе ключа выбран JSON, но если не выбран, выберете JSON, дальше нажимаем кнопку CREATE ![Выбираем JSON и создаём ключ](./pictures/select-json-and-create.png)
-29. Закрываем информационное окно ![Закрываем информационное окно](./pictures/close-info.png)
-30. У нас автоматически в браузере скачался файл ключа ![Файл ключа в загрузках](./pictures/key-is-downloaded.png)
+24. Нас перекидывает на страницу Credentials, где мы должны нажать на почту нами созданного аккаунта (именно на почту) или на значок редактирования (ручка) 
+    ![Выбираем наш аккаунт для редактирования](./pictures/choise-our-account.png)
+25. Открывается страница описания нашего аккаунта, нам нужно нажать в меню на KEYS 
+    ![Выбираем ключи](./pictures/select-keys.png)
+26. Нажимаем на кнопку ADD KEY 
+    ![Нажимаем на кнопку ADD KEY](./pictures/click-add-key-button.png)
+27. Открывается выпадающее меню, нам нужно выбрать "Create new key" 
+    ![Нажимаем на Create new key](./pictures/choise-create-new-key.png)
+28. По умолчанию в типе ключа выбран JSON, но если не выбран, выберете JSON, дальше нажимаем кнопку CREATE 
+    ![Выбираем JSON и создаём ключ](./pictures/select-json-and-create.png)
+29. Закрываем информационное окно 
+    ![Закрываем информационное окно](./pictures/close-info.png)
+30. У нас автоматически в браузере скачался файл ключа 
+    ![Файл ключа в загрузках](./pictures/key-is-downloaded.png)
 31. Ну и в целом на этом всё, закидываем файл в наш проект, переименовываем как будет удобно, приглашаем по почте в документ как редактора наш аккаунт, используем документацию для авторизации по этому ключу в коде
